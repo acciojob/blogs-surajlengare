@@ -16,7 +16,7 @@ public class Blog
     private int id;
     private String title;
     private String content;
-    @CreationTimestamp
+
     private Date pubDate;
 
                     // Unidirectional mapping
@@ -27,7 +27,7 @@ public class Blog
 
                     // Bidirectional mapping
                     // parent-> Blog,  child-> Image
-    @OneToMany(mappedBy = "block", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
     private List<Image> imageList = new ArrayList<>();
 
     //constructor

@@ -31,6 +31,7 @@ public class BlogService
         blog.setTitle(title);
         blog.setContent(content);
         blog.setUser(user);
+        blog.setPubDate(new Date());
         // imageList of blog will be empty initially
 
         user.getBlogList().add(blog);   // updating blogList of respective user
